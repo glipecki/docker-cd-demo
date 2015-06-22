@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -it -v `pwd`:/src build-env-webforms-ui /bin/bash -c 'echo "env versions:" && echo "node: `node -v`" && compass -v | head -n 1 && grunt --version && echo "# npm intall" && npm install && echo "# grunt build" && grunt watch'
